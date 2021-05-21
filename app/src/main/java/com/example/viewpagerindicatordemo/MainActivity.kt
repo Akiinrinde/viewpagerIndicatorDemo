@@ -14,10 +14,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val viewPager = binding.viewpager
-        val indicator = binding.indicator
+        val indicator = binding.dotsIndicator
 
         setUpViewPager(viewPager)
         indicator.setViewPager(viewPager)
+
 
 
     }

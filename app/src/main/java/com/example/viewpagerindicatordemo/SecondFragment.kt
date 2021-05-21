@@ -13,7 +13,7 @@ class SecondFragment : Fragment() {
     private lateinit var secondBinding: FragmentSecondBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val textView = secondBinding.textView
+
 
     }
 
@@ -23,6 +23,7 @@ class SecondFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         secondBinding = FragmentSecondBinding.inflate(layoutInflater)
+        val textView = secondBinding.textView
         return secondBinding.root
     }
 

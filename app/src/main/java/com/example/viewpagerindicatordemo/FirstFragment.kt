@@ -1,6 +1,7 @@
 package com.example.viewpagerindicatordemo
 
 import android.os.Bundle
+import android.text.SpannableString
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,8 +14,6 @@ class FirstFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val textView = firstBinding.textView
-        val imageView = firstBinding.imageView
 
     }
 
@@ -24,6 +23,17 @@ class FirstFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         firstBinding = FragmentFirstBinding.inflate(layoutInflater)
+
+        val textView = firstBinding.textView
+        val spannable = SpannableString("Save and optimize \nyour spending")
+        textView.text = spannable
+
+        val secondTexView = firstBinding.secondTextView
+        val secondSpannable = SpannableString("Take control of your finances with tips on how \nto lower bills and be better with your savings.")
+        secondTexView.text = secondSpannable
+
+
+
         return firstBinding.root
     }
 
